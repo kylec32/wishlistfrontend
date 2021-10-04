@@ -1,4 +1,3 @@
-import { createEffect } from '@ngrx/effects';
 import { createAction, props } from '@ngrx/store';
 
 export const signUp = createAction(
@@ -25,6 +24,10 @@ export const signInSuccess = createAction(
     props<{token: string}>()
 )
 
+export const signInInvalid = createAction(
+    '[Sign In] Sign In Invalid'
+)
+
 export const signInFailure = createAction(
     '[Sign In] Sign In Failure',
     props<{error: any}>()
@@ -32,4 +35,9 @@ export const signInFailure = createAction(
 
 export const signOut = createAction(
     '[Sign In] Sign Out'
+)
+
+export const setAuthToken = createAction(
+    '[Sign In] Set Token',
+    props<{token: string}>()
 )

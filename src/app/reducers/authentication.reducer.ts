@@ -11,11 +11,9 @@ export const initialState: State = {
 
 const authenticationReducer = createReducer(
     initialState,
-    on(AuthenticationEffects.signInSuccess, (state, {token}) => {
-        console.log({...state, token: token});
-        return ({...state, token: token})}
-        ),
-    on(AuthenticationEffects.signOut, state => ({...state, token: ''}))
+    on(AuthenticationEffects.signInSuccess, (state, {token}) => ({...state, token: token})),
+    on(AuthenticationEffects.signOut, state => ({...state, token: ''})),
+    on(AuthenticationEffects.setAuthToken, (state, {token}) => ({...state, token: token}))
 )
 
 export function reducer(state: State | undefined, action: Action) {
@@ -23,5 +21,3 @@ export function reducer(state: State | undefined, action: Action) {
 }
 
 export const selectToken = (state: any) => state.authentication.token;
-
-export const selectAll = (state: State) => state;
