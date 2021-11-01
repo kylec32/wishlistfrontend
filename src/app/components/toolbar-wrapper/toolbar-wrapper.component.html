@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon"  *ngIf="showSidebarOption">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Wish List Sharer</span>
+    <span class="example-spacer"></span>
+    <button mat-button style="float:right;" *ngIf="loggedIn" (click)="logout()">Sign Out<mat-icon>logout</mat-icon></button>
+</mat-toolbar>
+<router-outlet></router-outlet>
+<div style="margin-top:25px; margin-bottom:15px">
+    <div style="text-align:center; color:#565656;">
+        Made with <span style="color: red">&hearts;</span> by Kyle Carter {{currentYear}}
+    </div>
+</div>

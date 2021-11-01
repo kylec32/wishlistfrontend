@@ -1,0 +1,11 @@
+<mat-drawer-container class="example-container" autosize>
+<mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-follower-list class="upper-right-desktop my-content" [following]="following" (onDelete)="removeFollower($event)" (newFolloweeSelected)="connectWithFollower($event)"></app-follower-list>
+</mat-drawer>
+<div class="example-sidenav-content">
+    This is a wondeful wish list
+    <button (click)="drawer.toggle()">Toggle</button>
+</div>
+
+</mat-drawer-container>
+<!-- <app-follower-list class="upper-right-desktop my-content" [following]="following" (onDelete)="removeFollower($event)" (newFolloweeSelected)="connectWithFollower($event)"></app-follower-list> -->

@@ -1,0 +1,12 @@
+.header {
+    text-align: center;
+    background-color: #565656;
+    font-size:30px;
+    margin-bottom: 10px;
+    color:white;
+    padding:10px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
